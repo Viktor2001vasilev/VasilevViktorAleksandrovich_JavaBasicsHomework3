@@ -13,5 +13,6 @@ public class Fish extends Herbivore implements Swim {
         setSatiety(satiety);
         setVoice(voice);
         setName(name);
+        setSize(Size.SMALL);
     }
 }

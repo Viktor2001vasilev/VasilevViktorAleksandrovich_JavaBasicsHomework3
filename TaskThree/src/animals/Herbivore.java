@@ -6,7 +6,6 @@ public class Herbivore extends Animal{
 
     @Override
     public void eat(Food food) throws WrongFoodException {
-
             if (food instanceof Grass) {
                 System.out.println(getName() + " ест " + food.getFoodName() + ".");
                 setSatiety((getSatiety() + food.getSatiety()));
@@ -15,10 +14,5 @@ public class Herbivore extends Animal{
             else {
                 throw new WrongFoodException("Не та еда!");
             }
-
-
-
     }
-
-
 }

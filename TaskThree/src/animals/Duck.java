@@ -23,11 +23,11 @@ public class Duck <Grass> extends Herbivore implements Fly, Run, Swim, Voice{
         return getName();
     }
 
-    public Duck(int id, int satiety, String name, String voice, int size) {
+    public Duck(int id, int satiety, String name, String voice) {
         setId(id);
         setSatiety(satiety);
         setVoice(voice);
         setName(name);
-        setSize(size);
+        setSize(Size.MEDIUM);
     }
 }

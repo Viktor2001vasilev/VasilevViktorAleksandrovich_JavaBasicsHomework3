@@ -22,5 +22,6 @@ public class Bear extends Carnivorous implements Run, Voice{
         setSatiety(satiety);
         setVoice(voice);
         setName(name);
+        setSize(Size.HUGE);
     }
 }

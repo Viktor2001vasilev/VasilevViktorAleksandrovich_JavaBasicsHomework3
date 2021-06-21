@@ -1,5 +1,6 @@
 package animals;
 
+
 public class Lion extends Carnivorous implements Run, Voice{
 
     @Override
@@ -17,11 +18,14 @@ public class Lion extends Carnivorous implements Run, Voice{
         return getName();
     }
 
-    public Lion(int id, int satiety, String name, String voice, int size) {
+
+    public Lion(int id, int satiety, String name, String voice) {
         setId(id);
         setSatiety(satiety);
         setVoice(voice);
         setName(name);
-        setSize(size);
+        setSize(Size.HUGE);
     }
+
+
 }

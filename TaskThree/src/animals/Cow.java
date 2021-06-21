@@ -17,11 +17,11 @@ public class Cow extends Herbivore implements Run, Voice{
         return getName();
     }
 
-    public Cow(int id, int satiety, String name, String voice, int size) {
+    public Cow(int id, int satiety, String name, String voice) {
         setId(id);
         setSatiety(satiety);
         setVoice(voice);
         setName(name);
-        setSize(size);
+        setSize(Size.LARGE);
     }
 }

@@ -3,23 +3,22 @@ import animals.*;
 import java.util.HashMap;
 
 
-public class Aviary<T> {
-    private int aviarySize;
+public class Aviary<T extends Animal> {
+    private Size aviarySize;
     private HashMap<Integer, T> animalsInAviary = new HashMap<>();
 
 
-    public Aviary(int aviarySize) {
-        this.aviarySize = aviarySize;
+    public Aviary(Size size) {
+        this.aviarySize = size;
     }
 
-    public void putAnimalInAviary (Animal animalForParameters, T animal) {
-        if (animalForParameters.getSize() > aviarySize) {
-            System.out.println("Нельзя добавить, размер вольера маловат.");
+    public void putAnimalInAviary (T animal) {
+        if (animal.getSize().equals(aviarySize)) {
+            animalsInAviary.put(animal.getId(), animal);
+            System.out.println("Животное " + animal.getName() + " добавлено в вольер.");
         }
         else {
-            animalsInAviary.put(animalForParameters.getId(), animal);
-            System.out.println("Животное " + animalForParameters.getName() + " добавлено в вольер.");
-            aviarySize -= animalForParameters.getSize();
+            System.out.println("Нельзя добавить, размер вольера маловат.");
         }
     }
 
@@ -30,6 +29,10 @@ public class Aviary<T> {
 
     public void getAnimalLink (int id) {
         System.out.println(animalsInAviary.get(id));
+    }
+
+    public void getNumOfMembers() {
+        System.out.println("В вольере " + animalsInAviary.size() + " животных.");
     }
 
 

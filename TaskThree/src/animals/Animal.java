@@ -4,18 +4,19 @@ import food.*;
 
 import java.util.Objects;
 
-public abstract class Animal<E> {
+public abstract class Animal {
     private int id;
     private String name;
     private int satiety;
     private String voice;
-    private int size;
+    private Size size;
 
-    public void setSize(int size) {
-        this.size = size;
-    }
-    public int getSize() {
+    public Size getSize() {
         return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
     }
     public void setVoice(String voice) {
         this.voice = voice;
@@ -51,11 +52,11 @@ public abstract class Animal<E> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return id == animal.id;
+        return id == animal.id && satiety == animal.satiety && size == animal.size && name.equals(animal.name) && voice.equals(animal.voice);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, name, satiety, voice, size);
     }
 }
