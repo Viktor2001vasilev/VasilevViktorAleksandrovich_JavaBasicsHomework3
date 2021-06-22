@@ -1,5 +1,7 @@
 package animals;
 
+import Enum.Size;
+
 public class Duck <Grass> extends Herbivore implements Fly, Run, Swim, Voice{
 
     @Override

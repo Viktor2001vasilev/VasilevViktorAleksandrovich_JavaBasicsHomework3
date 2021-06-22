@@ -2,7 +2,7 @@ package animals;
 
 import food.*;
 
-public class Herbivore extends Animal{
+public abstract class Herbivore extends Animal{
 
     @Override
     public void eat(Food food) throws WrongFoodException {

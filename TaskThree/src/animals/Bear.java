@@ -1,5 +1,7 @@
 package animals;
 
+import Enum.Size;
+
 public class Bear extends Carnivorous implements Run, Voice{
 
     @Override

@@ -1,4 +1,4 @@
-package animals;
+package Enum;
 
 public enum Size {
     HUGE,

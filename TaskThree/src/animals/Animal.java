@@ -1,6 +1,7 @@
 package animals;
 
 import food.*;
+import Enum.Size;
 
 import java.util.Objects;
 

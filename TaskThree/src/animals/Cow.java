@@ -1,4 +1,5 @@
 package animals;
+import Enum.Size;
 
 public class Cow extends Herbivore implements Run, Voice{
 

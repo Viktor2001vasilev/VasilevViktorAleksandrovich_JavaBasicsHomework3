@@ -1,5 +1,7 @@
 package animals;
 
+import Enum.Size;
+
 public class Fish extends Herbivore implements Swim {
 
     @Override
